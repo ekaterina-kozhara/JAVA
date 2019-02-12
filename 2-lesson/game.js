@@ -19,29 +19,29 @@ let isSunk = false
 while (isSunk === false) {
   // Получить координаты выстрела
   currentShot = Number(prompt("Введите число от 0 до 9:"))
-  // Нужно увеличить счетчик всех выстрелов
-  shots += 1
-  // Сравнить координаты выстрела с координатами крабля
-  if (currentShot === location1) {
-    hits += 1
-    if (hits === 3) {
-      isSunk = true
-      alert("Победа!")
+
+  if (currentShot > 0 && currentShot <= 9) {
+    shots += 1
+    // Сравнить координаты выстрела с координатами крабля
+    if (currentShot === location1 || currentShot === location2 || currentShot === location3) {
+      alert("попал")
+      hits += 1
+      if (hits === 3) {
+        isSunk = true
+        alert("Победа!")
+      }
+    } else {
+      alert("не попал")
     }
-  } else if (currentShot === location2) {
-    hits += 1
-    if (hits === 3) {
-      isSunk = true
-      alert("Победа!")
-    }
-  } else if (currentShot === location3) {
-    hits += 1
-    if (hits === 3) {
-      isSunk = true
-      alert("Победа!")
-    }
+  } else {
+    alert("ошибка, вы ввели неправльное число, нужно ввести от 0 до 9")
   }
-  // Если игрок попал, увеличиваем счетчик попаданий на 1
-  // Если количество попаданий равно 3 то меняем значение  isSunk на  true и сообщаем о победе
+    // Нужно увеличить счетчик всех выстрелов
 }
+
+let rating = Math.round(3 / shots * 100)
+alert ("Вам понадобилось" + shots + "выстрелов, чтобы потопить корабль. Ваш рейтинг: " + rating)ы
+
+// Если игрок попал, увеличиваем счетчик попаданий на 1
+// Если количество попаданий равно 3 то меняем значение  isSunk на  true и сообщаем о победе
 // Выводим стиистику игры и рейтинг игрока
