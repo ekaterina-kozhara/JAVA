@@ -17,17 +17,17 @@
       let meal1 = {
         name: "Помидор",
         isHealthy: true,
-        spoons: Math.floor(Math.random() * 5) + 2
+        spoons: Math.floor(Math.random() * 5  + 1)
       }
       let meal2 = {
         name: "Морковка",
         isHealthy: true,
-        spoons: Math.floor(Math.random() * 5) + 2
+        spoons: Math.floor(Math.random() * 5 + 1)
       }
       let meal3 = {
         name: "Сельдерей",
         isHealthy: true,
-        spoons: Math.floor(Math.random() * 5) + 2
+        spoons: Math.floor(Math.random() * 5 + 1)
       }
       function checkMeal(obj) {
         if (obj.isHealthy) {
@@ -35,14 +35,16 @@
         } else {
           console.log("Лучше съесть что-то более здоровое")
         }
+        for (let i = 0; i < obj.spoons; i+=1) {
+          console.log("ном-ном-ном")
+        }
       }
+
       checkMeal(meal1)
       checkMeal(meal2)
       checkMeal(meal3)
 
-      function nomNom(obj) {
-        console.log()
-      }
+
 
     </script>
 
