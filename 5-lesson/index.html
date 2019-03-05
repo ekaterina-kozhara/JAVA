@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // let user = {
+      // }
+      //объекты, добавить новый - user.secretNumber = ... или user["свойство"] = значение
+      //
+      // {seats: 4,
+      // user: 3,
+      // }
+
+      let meal1 = {
+        name: "Помидор",
+        isHealthy: true,
+        spoons: Math.floor(Math.random() * 5) + 2
+      }
+      let meal2 = {
+        name: "Морковка",
+        isHealthy: true,
+        spoons: Math.floor(Math.random() * 5) + 2
+      }
+      let meal3 = {
+        name: "Сельдерей",
+        isHealthy: true,
+        spoons: Math.floor(Math.random() * 5) + 2
+      }
+      function checkMeal(obj) {
+        if (obj.isHealthy) {
+          console.log(obj.name + " можно кушать")
+        } else {
+          console.log("Лучше съесть что-то более здоровое")
+        }
+      }
+      checkMeal(meal1)
+      checkMeal(meal2)
+      checkMeal(meal3)
+
+      function nomNom(obj) {
+        console.log()
+      }
+
+    </script>
+
+  </body>
+</html>
